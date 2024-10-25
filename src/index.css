@@ -16,7 +16,7 @@
 
   /* others */
   --background: #0f0f0f;
-  --footer-background: #080808;
+  --footer: #080808;
 }
 
 *{
@@ -26,6 +26,7 @@
   scroll-behavior: smooth;
   text-decoration: none;
   list-style: none;
+  
 }
 
 body{
@@ -34,4 +35,5 @@ body{
   color: var(--off-white);
   user-select: text;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
