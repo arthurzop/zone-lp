@@ -17,13 +17,29 @@ import helix from "./assets/purple-helix.png";
 import diamond from "./assets/purple-diamond.png";
 import donut from "./assets/purple-torus.png";
 import instagram from "./assets/instagram.png";
+import x from "./assets/X.png";
+import burguer from "./assets/burger.png";
 
 function App() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const handleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
   return (
     <>
       <header>
         <img src={headerLogo} alt="logo zone" />
-        <nav>
+        <img
+          src={burguer}
+          alt="menu button"
+          className="btn"
+          onClick={() => {
+            handleMenu();
+          }}
+        />
+        <nav className={`menu ${menuOpen ? "open" : ""}`}>
+          <img src={x} alt="close menu" className="x" onClick={handleMenu} />
           <li>
             <a href="#solucao">Nossa Solução</a>
           </li>
@@ -32,7 +48,7 @@ function App() {
           </li>
           <li>
             <a href="#inscricao" className="link-variant">
-              Se Increva!
+              Se Inscreva!
             </a>
           </li>
         </nav>

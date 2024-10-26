@@ -283,7 +283,7 @@ a {
   justify-content: space-between;
   margin: 0vh 4vw;
 
-  img{
+  img {
     width: 50%;
   }
 }
@@ -327,10 +327,9 @@ a {
     border-radius: 4px;
     color: var(--off-white);
   }
-
 }
 
-button{
+button {
   width: 50%;
   padding: 1.5vh;
   background-color: var(--palatinate);
@@ -339,13 +338,13 @@ button{
   border-radius: 4.5px;
   border: none;
 
-  &:hover{
+  &:hover {
     background-color: #7e1f8b;
     cursor: pointer;
   }
 }
 
-footer{
+footer {
   width: 100%;
   background-color: var(--footer);
   display: flex;
@@ -356,7 +355,7 @@ footer{
   gap: 34px;
 }
 
-.middle{
+.middle {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -364,21 +363,74 @@ footer{
   gap: 34px;
 }
 
-.socials-container{
+.socials-container {
   display: flex;
   width: 70%;
   justify-content: space-around;
 
-  img:hover{
+  img:hover {
     transform: scale(1.05);
     cursor: pointer;
   }
 }
 
-.credits{
+.credits {
   display: flex;
   width: 100%;
   justify-content: space-between;
   align-items: center;
   padding: 0 2vw;
+}
+
+.menu {
+  display: flex;
+  gap: 3vw;
+}
+
+.menu.open {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 25%;
+  height: fit-content;
+  background-color: #111;
+  padding: 3vh 3vw;
+  transition: transform 0.3s ease;
+}
+
+.menu .x {
+  align-self: flex-end;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.x {
+  display: none;
+}
+
+.btn {
+  display: none;
+  cursor: pointer;
+  width: 30px;
+}
+
+@media screen and (max-width: 770px) {
+  .btn {
+    display: block;
+  }
+
+  nav.menu {
+    display: none;
+  }
+
+  .menu.open {
+    display: flex;
+  }
+
+  .x {
+    display: block;
+  }
 }
